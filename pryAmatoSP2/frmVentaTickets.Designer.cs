@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVentaTickets));
             dtpFecha = new DateTimePicker();
             txtNumeroTicket = new TextBox();
             cmbTipoTicket = new ComboBox();
@@ -115,6 +116,7 @@
             Controls.Add(cmbTipoTicket);
             Controls.Add(txtNumeroTicket);
             Controls.Add(dtpFecha);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "frmVentaTickets";
             Text = "Qlokura.tv - Venta de Tickets";
