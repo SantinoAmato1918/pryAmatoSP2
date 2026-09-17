@@ -33,7 +33,9 @@ namespace pryAmatoSP2
             string tipo = cmbTipoTicket.Text;
             string fecha = dtpFecha.Text;
 
+
             //Mensaje
+            string linea = numero + " - " + tipo + " - " + fecha;
             lstVentas.Items.Add($"{fecha} - {numero} - {tipo}");
 
             //Limpiar
@@ -46,6 +48,13 @@ namespace pryAmatoSP2
 
             //Focus
             txtNumeroTicket.Focus();
+
+            //Crear Archivo
+            StreamWriter sw = new StreamWriter("miArchivoOculto", true);
+
+            sw.WriteLine(linea);
+
+            sw.Close();
         }
 
         private void frmVentaTickets_Load(object sender, EventArgs e)
